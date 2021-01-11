@@ -4,10 +4,18 @@ import App from './components/App/App.svelte';
 
 const init = () => {
   selectMounts('mailchimp').forEach(mountEl => {
-    mountEl.classList.add('u-full');
+    const isFullWidth = (mountEl.parentElement?.className || '').indexOf('Main') > -1;
+
+    if (isFullWidth) {
+      mountEl.classList.add('u-full');
+    }
+
     new App({
       target: mountEl,
-      props: acto(getMountValue(mountEl))
+      props: {
+        isFullWidth,
+        ...acto(getMountValue(mountEl))
+      }
     });
   });
 };

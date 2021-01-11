@@ -1,4 +1,5 @@
 <script lang="ts">
+  export let isFullWidth: boolean = false;
   export let u: string = 'f2bfce3d5da41bb17bd8659d0';
   export let id: string = '4fa27f25e6';
 
@@ -17,7 +18,9 @@
     justify-content: stretch;
 
     @media (min-width: 641px) {
-      flex-direction: row;
+      form.is-full-width & {
+        flex-direction: row;
+      }
     }
   }
 
@@ -25,11 +28,17 @@
     flex: 1 1 100%;
     border: 0.125rem solid #111;
     padding: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-family: ABCSans, sans-serif;
 
     @media (min-width: 641px) {
-      flex: 1 1 auto;
+      form.is-full-width & {
+        flex: 1 1 auto;
+      }
+    }
+
+    form.is-full-width & {
+      font-size: 1.25rem;
     }
   }
 
@@ -41,12 +50,14 @@
     cursor: pointer;
 
     @media (min-width: 641px) {
-      margin: 0 0 0 0.75rem;
+      form.is-full-width & {
+        margin: 0 0 0 0.75rem;
+      }
     }
   }
 </style>
 
-<form {action} method="post" role="form" target="_blank" class="u-layout">
+<form {action} method="post" role="form" target="_blank" class:is-full-width={isFullWidth} class:u-layout={isFullWidth}>
   <div style="position: absolute; left: -5000px;" aria-hidden="true">
     <input type="text" {name} tabindex="-1" value="" />
   </div>
