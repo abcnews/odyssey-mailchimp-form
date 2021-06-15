@@ -7,6 +7,31 @@
   const name = `b_${u}_${id}`;
 </script>
 
+<form {action} method="post" role="form" target="_blank" class:is-full-width={isFullWidth} class:u-layout={isFullWidth}>
+  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+    <input type="text" {name} tabindex="-1" value="" />
+  </div>
+  <div class="fields">
+    <input
+      required
+      type="email"
+      aria-label="Email"
+      autocapitalize="off"
+      autocorrect="off"
+      value=""
+      placeholder="you@example.com"
+      name="EMAIL"
+      id="mce-EMAIL"
+    />
+    <button type="submit" name="subscribe">Subscribe</button>
+  </div>
+  <p>
+    Your information is being handled in accordance with the <a
+      href="https://help.abc.net.au/hc/en-us/articles/360001511015">ABC Privacy Collection Statement</a
+    >.
+  </p>
+</form>
+
 <style lang="scss">
   form {
     padding: 0 !important;
@@ -56,22 +81,3 @@
     }
   }
 </style>
-
-<form {action} method="post" role="form" target="_blank" class:is-full-width={isFullWidth} class:u-layout={isFullWidth}>
-  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-    <input type="text" {name} tabindex="-1" value="" />
-  </div>
-  <div class="fields">
-    <input
-      required
-      type="email"
-      aria-label="Email"
-      autocapitalize="off"
-      autocorrect="off"
-      value=""
-      placeholder="you@example.com"
-      name="EMAIL"
-      id="mce-EMAIL" />
-    <button type="submit" name="subscribe">Subscribe</button>
-  </div>
-</form>
