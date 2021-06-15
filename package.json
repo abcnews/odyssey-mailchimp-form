@@ -21,13 +21,14 @@
 		}
 	},
 	"devDependencies": {
-		"@abcnews/aunty": "^11.2.1",
+		"@abcnews/aunty": "^12.0.2",
 		"@testing-library/svelte": "^3.0.3",
 		"@types/jest": "^26.0.20",
-		"@types/webpack-env": "^1.16.0"
+		"@types/webpack-env": "^1.16.0",
+		"typescript": "^4.3.2"
 	},
 	"dependencies": {
-		"@abcnews/alternating-case-to-object": "^2.0.1",
+		"@abcnews/alternating-case-to-object": "^3.0.2",
 		"@abcnews/mount-utils": "^2.0.0",
 		"svelte": "^3.31.2"
 	}
